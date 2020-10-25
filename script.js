@@ -23,10 +23,15 @@ text3.style.color = '#00947a';
 // Q 4 (難) 以下の文字の色をすべて変更してください ３段
 // 「for of」を使います。
 
- let text4 = document.getElementById('q4-text');
- for (let text4 of 'q4-text');
+ let text4 = document.getElementsByClassName('q4-text');
+ for (let elements of text4)
 console.log(text4);
- text4.style.color = '#ea5532';
+text4.style.color = '#00947a';
+
+
+//  for (let text4 of 'q4-text');
+// console.log(text4);
+//  text4.style.color = '#ea5532';
 
 
 
