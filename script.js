@@ -1,6 +1,6 @@
 // このファイルに解答を書いてください。
 // 問題文はindex.htmlにあります。
-
+function answer(){
 
 // Q 1　以下のテキストの文字を取得して、console.logで出力する
 let text = document.getElementById('q1-text');
@@ -21,12 +21,28 @@ text3.style.color = '#00947a';
 
 
 // Q 4 (難) 以下の文字の色をすべて変更してください ３段
-// 「for of」を使います。
+// 「for of」を使います　↓
+// 配列の繰り返し処理を、回数を意識せずに使える書き方
+// 「配列限定」の繰り返し処理
 
  let text4 = document.getElementsByClassName('q4-text');
- for (let elements of text4)
 console.log(text4);
-text4.style.color = '#00947a';
+ for (let elements of text4){
+elements.style.color = '#00947a';
+}
+// または
+for (let i = 0; i =< text4.length; i++){
+	if(i == 0){
+		text4[i].style.color = 'red';
+	}
+	if(i == 1){
+		text4[i].style.color ='#00947a';
+	}
+	if(i > 1){
+		text4[i].style.color ='grey';
+	}
+}
+// ここでのelementsは、繰り返している間に配列から一つずつ取り出した値を格納する変数
 
 
 //  for (let text4 of 'q4-text');
@@ -40,3 +56,5 @@ text4.style.color = '#00947a';
 // Q 5   style.backgroundColor
 
 
+
+}
