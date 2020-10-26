@@ -42,14 +42,21 @@ for (let element2 of text5){
 // Q 6　以下のテキストがクリックされた時、クリックされた要素の文字の色を変更する
 // Click Me!!!
 
-
-
+var text = document.getElementById('q6-text');
+text.addEventListener('click',function(){
+	this.style.color = '#e5a323';
+})
 
 
 // Q 7　以下のテキストがマウスオーバーされた時、
 // マウスオーバーされた要素の背景色と文字色を変更する
 // Mouse Over Me!!!
-
+var text = document.getElementById('q7-text');
+text.addEventListener('mouseover',function(){
+	this.style.color = '#d70035';
+	this.style.backgroundColor = '#f6e5cc';
+	// this.style.color.backgroundColor = '#d70035, #c82c55';
+})
 
 
 // Q 8
