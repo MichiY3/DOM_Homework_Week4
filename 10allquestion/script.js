@@ -88,5 +88,16 @@ function getInput(){
 // ただし、年齢が20未満の場合には、
 // 「20歳未満の方の利用は禁止です。」と表示してください。
 
+var input = document.querySelector('#q10-input');
+console.log(input.value);
 
+function getInput(){
+	var input =document.querySelector('#q10-input');
+		if(input < 20){
+			input.value = '20歳未満の方の利用は禁止です。';
+		console.log(input.value);
+	}
+		
+	}
+	
 
