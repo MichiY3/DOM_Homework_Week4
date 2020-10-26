@@ -65,12 +65,22 @@ text.addEventListener('mouseover',function(){
 // またマウスが外れた時、背景色を元に戻す
 // Mouse Over Me!!!
 
-
+var text = document.getElementById('q8-text');
+text.addEventListener('mouseover',function(){
+	this.style.backgroundColor ='#fac559';
+});
+text.addEventListener('mouseleave',function(){
+	this.style.backgroundColor = '';
+})
 
 // Q 9　Checkボタンがクリックされた時、入力された名前をpタグに表示してください
 
-
-
+var input = document.querySelector('#q9-input');
+console.log(input.value);
+function getInput(){
+	var input = document.querySelector('#q9-input');
+	console.log(input.value);
+}
 
 // Q 10
 // Checkボタンがクリックされた時、
