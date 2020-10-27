@@ -82,7 +82,10 @@ text.addEventListener('mouseleave',function(){
 // 	var input = document.querySelector('#q9-input');
 // 	console.log(input.value);
 // }
+// 表示させるための変数がないから出て無いと思う
 
+
+// Answer-------------------------------------
 // 入力された文字を取得するための変数
 let button9 = document.querySelector('#q9-btn');
 button9.addEventListener('click',function(){
