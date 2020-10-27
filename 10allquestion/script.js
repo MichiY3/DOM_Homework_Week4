@@ -45,7 +45,8 @@ for (let element2 of text5){
 var text = document.getElementById('q6-text');
 text.addEventListener('click',function(){
 	this.style.color = '#e5a323';
-})
+// this　とは　document.getElementById('q6-text')のこと
+});
 
 
 // Q 7　以下のテキストがマウスオーバーされた時、
@@ -56,7 +57,7 @@ text.addEventListener('mouseover',function(){
 	this.style.color = '#d70035';
 	this.style.backgroundColor = '#f6e5cc';
 	// this.style.color.backgroundColor = '#d70035, #c82c55';
-})
+});
 
 
 // Q 8
@@ -75,12 +76,24 @@ text.addEventListener('mouseleave',function(){
 
 // Q 9　Checkボタンがクリックされた時、入力された名前をpタグに表示してください
 
-var input = document.querySelector('#q9-input');
-console.log(input.value);
-function getInput(){
-	var input = document.querySelector('#q9-input');
-	console.log(input.value);
-}
+// var input = document.querySelector('#q9-input');
+// console.log(input.value);
+// function getInput(){
+// 	var input = document.querySelector('#q9-input');
+// 	console.log(input.value);
+// }
+
+// 入力された文字を取得するための変数
+let button9 = document.querySelector('#q9-btn');
+button9.addEventListener('click',function(){
+// ボタンが押された時のイベントを追加するための変数
+var input9 = document.querySelector('#q9-input');
+// 文字を表示するための変数
+let result9 = document.querySelector('#q9-result');
+result9.textContent = input9.value;
+console.log(input9.value);
+});
+
 
 // Q 10
 // Checkボタンがクリックされた時、
@@ -88,19 +101,35 @@ function getInput(){
 // ただし、年齢が20未満の場合には、
 // 「20歳未満の方の利用は禁止です。」と表示してください。
 
-var input = document.querySelector('#q10-input');
-console.log(input.value);
+// var input = document.querySelector('#q10-input');
+// console.log(input.value);
 
-function getInput(){
-	var input =document.querySelector('#q10-input');
-	console.log(input.value);	
-		if(input > 20){
-			input.value ='';
-		}
-		else{
-			input.value = '20歳未満の方の利用は禁止です。';
+// function getInput(){
+// 	var input =document.querySelector('#q10-input');
+// 	console.log(input.value);	
+// 		if(input > 20){
+// 			input.value ='';
+// 		}
+// 		else{
+// 			input.value = '20歳未満の方の利用は禁止です。';
 		
-	}
-	}
+// 	}
+// 	}
 	
+let button10 = document.querySelector('.q10-btn');
+button10.addEventListener('click',function(){
+var input10 = document.querySelector('#q10-input');
+let result10 = document.querySelector('#q10-result');
+	if(input10.value < 20){
+		result10.textContent = '20歳未満の方の利用は禁止です。';
+	}
+// 60歳以上の場合、「６０歳以上の肩は半額です」と表示
+	else if(input10.value >= 60){
+		result10.textContent = '60歳以上の方は半額です。';
+	}
+	else{
+		result10.textContent = result10.value;
+	}
+		
+});
 
