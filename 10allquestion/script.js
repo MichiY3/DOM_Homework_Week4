@@ -93,11 +93,14 @@ console.log(input.value);
 
 function getInput(){
 	var input =document.querySelector('#q10-input');
-		if(input < 20){
+	console.log(input.value);	
+		if(input > 20){
+			input.value ='';
+		}
+		else{
 			input.value = '20歳未満の方の利用は禁止です。';
-		console.log(input.value);
-	}
 		
+	}
 	}
 	
 
