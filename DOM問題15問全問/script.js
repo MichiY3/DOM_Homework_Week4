@@ -133,9 +133,6 @@ function q14_btn_click(){
 };
 
 
-
-
-
 // Q 15 (難)
 // switchまたはifを使います。
 // 要素.href = 'https://google.com';
@@ -150,20 +147,40 @@ function q14_btn_click(){
 // 例 Googleの場合
 // '<a href="https://google.com">google<a>'
 
-let parent_text = document.querySelector('.q15-btn');
-let child_a=document.createElement('a');
-	if(function q15_google_btn_click()){
-		child_a.href= "https://google.com";
-	}
-	else if(function q15_YouTube_btn_click()){
-		child_a.href = 'https://youtube.com';
-	}
-	else if(function q15_Amazon_btn_click()){
-		child_a.href = 'https://amazon.com';
-	}
-parent_text.appendChild(child_a);
+// let parent_text = document.querySelector('.q15-btn');
+// let child_a=document.createElement('a');
+// 	if(function q15_google_btn_click()){
+// 		child_a.href= "https://google.com";
+// 	}
+// 	else if(function q15_YouTube_btn_click()){
+// 		child_a.href = 'https://youtube.com';
+// 	}
+// 	else if(function q15_Amazon_btn_click()){
+// 		child_a.href = 'https://amazon.com';
+// 	}
+// parent_text.appendChild(child_a);
 
+let parent_text = document.querySelectorAll('.q15-btn');
+ for(let q15_btn_each of parent_text){
+ 	q15_btn_each.addEventListener('click',function(){
+ 	let q15_link_list  = document.querySelector('q15-link-list');
+ 	let add_a = document.createElement('a');
 
+ 		if(q15_btn_each.textContent =='Google'){
+ 			add.a href ='https://google.com/';
+ 			add_a.textContent=q15_btn_each.textContent;
+ 		}
+ 		if(q15_btn_each.textContent =='Youtube'){
+ 			add.a href ='https://youtube.com/';
+ 			add_a.textContent=q15_btn_each.textContent;
+ 		}
+ 		if(q15_btn_each.textContent =='Amazon'){
+ 			add.a href ='https://amazon.com/';
+ 			add_a.textContent=q15_btn_each.textContent;
+ 		}
+ 	
+ 	q15_link_list.appendChild(add_a);
+ })};
 
 
 
