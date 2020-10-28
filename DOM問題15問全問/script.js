@@ -29,21 +29,111 @@
 // Q 10
 
 
-// Q 11
+// Q 11　Checkボタンがクリックされた時、入力された名前と年齢をpタグに表示してください。
+// ただし、年齢が20未満の場合には、「20歳未満の方の利用は禁止です。」、
+// 名前が空欄の場合には、「名前が空欄です」と 赤文字で 表示してください。
+
+let btn11 = document.querySelector('.q11-btn');
+btn11.addEventListener('click',function(){
+var input11_1 = document.querySelector('#q11-input-name');
+
+var result11_1 = document.querySelector('#q11-result-name');
+if(input11_1.value = null){
+		result11_1.textContent = '名前が空欄です';
+		result11_1.textContent.style.color = 'red';
+	}
+	else{
+		result11_1.textContent = result11_1.value;
+		}
+	console.log(input11_1.value);
+});
+btn11.addEventListener('click',function(){
+var input11_2 = document.querySelector('#q11-input-age');
+var result11_2 = document.querySelector('#q11-result-age');
+	if(input11_2.value < 20){
+		result11_2.textContent = '20歳未満の方の利用は禁止です。';
+	}
+	 else {
+		result11_2.textContent = result11_2.value;
+	}
+	});
+	
+	// console.log(result11_2.value)
+	// if(input11_1.value =''){
+	// 	result11_1.textContent = '名前が空欄です'
+	// }
+	// else{
+	// 	result10.textContent = result10.value;
+	// }
 
 
-// Q 12
 
 
-// Q 13
+
+// Q 12　ボタンがクリックされたときに、
+// 押されたボタンと同じテキストを持つ、pタグを作成して画面に表示する
+function q12_btn_click(){
+let parent_text = document.querySelector('.q12-result');
+let child_p=document.createElement('p');
+
+child_p.textContent = document.querySelector('.q12-btn').textContent;
+
+// child_p.id= 'add_id';
+parent_text.appendChild(child_p);
+
+}
+
+
+// Q 13　　「追加」をクリックしたときに「リンゴ」をリストの先頭に追加してください
 // 飛ばしていいです。
+function q13_btn_click(){
+let parent_text = document.querySelector('.q13-box');
+let child_fruit_p = document.createElement('p');
+child_fruit_p.textContent ='リンゴ';
+parent_text.insertBefore(child_fruit_p,'メロン');
+};
 
 
-// Q 14
+
+
+// Q 14　　削除ボタンがクリックされたときに、「ニワトリ」をリストから削除してください
+
+function q14_btn_click(){
+	let niwatori  = document.querySelector('#chicken');
+	niwatori.remove();
+};
+
+
+
 
 
 // Q 15 (難)
 // switchまたはifを使います。
 // 要素.href = 'https://google.com';
 // でリンク先を追加できます。
+
+// 以下のボタンがクリックされたとき、
+// それぞれのテキストに合うリンクを作成する。
+// Google: https://google.com
+// Youtube: https://youtube.com
+// Amazon: https://amazon.com
+
+// 例 Googleの場合
+// '<a href="https://google.com">google<a>'
+
+let parent_text = document.querySelector('.q15-btn');
+let child_a=document.createElement('a');
+	if(function q15_google_btn_click()){
+		child_a.href = 'https://google.com';
+	}
+	else if(function q15_YouTube_btn_click()){
+		child_a.href = 'https://youtube.com';
+	}
+	else if(function q15_Amazon_btn_click()){
+		child_a.href = 'https://amazon.com';
+	}
+parent_text.appendChild(child_a);
+
+
+
 
